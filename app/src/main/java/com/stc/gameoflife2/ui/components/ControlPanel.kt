@@ -41,17 +41,17 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-import com.stc.gameoflife2.model.GameConfig
+import com.stc.gameoflife2.model.SpeedLevel
 
 @Composable
 fun ControlPanel(
     isRunning: Boolean,
-    speedMs: Long,
+    speedLevel: SpeedLevel,
     onPlayPause: () -> Unit,
     onStep: () -> Unit,
     onClear: () -> Unit,
     onRandomize: () -> Unit,
-    onSpeedChange: (Long) -> Unit,
+    onSpeedChange: (SpeedLevel) -> Unit,
     onGridSizeClick: () -> Unit,
     onAddPatternClick: () -> Unit,
     modifier: Modifier = Modifier
@@ -137,11 +137,12 @@ fun ControlPanel(
                     )
 
                     Slider(
-                        value = (GameConfig.MAX_SPEED_MS - speedMs).toFloat(),
+                        value = speedLevel.ordinal.toFloat(),
                         onValueChange = { value ->
-                            onSpeedChange(GameConfig.MAX_SPEED_MS - value.toLong())
+                            onSpeedChange(SpeedLevel.fromOrdinal(value.toInt()))
                         },
-                        valueRange = 0f..(GameConfig.MAX_SPEED_MS - GameConfig.MIN_SPEED_MS).toFloat(),
+                        valueRange = 0f..(SpeedLevel.entries.size - 1).toFloat(),
+                        steps = SpeedLevel.entries.size - 2,
                         modifier = Modifier.weight(1f),
                         colors = SliderDefaults.colors(
                             thumbColor = MaterialTheme.colorScheme.primary,
@@ -155,12 +156,11 @@ fun ControlPanel(
                         shape = MaterialTheme.shapes.small
                     ) {
                         Text(
-                            text = "${speedMs}ms",
+                            text = "${speedLevel.displayNumber}",
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onPrimaryContainer,
                             modifier = Modifier
-                                .padding(horizontal = 8.dp, vertical = 4.dp)
-                                .width(50.dp)
+                                .padding(horizontal = 12.dp, vertical = 4.dp)
                         )
                     }
                 }

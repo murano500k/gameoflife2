@@ -9,6 +9,7 @@ import com.stc.gameoflife2.model.GameRules
 import com.stc.gameoflife2.model.GameState
 import com.stc.gameoflife2.model.Grid
 import com.stc.gameoflife2.model.Pattern
+import com.stc.gameoflife2.model.SpeedLevel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -97,18 +98,13 @@ class GameViewModel(
 
     // ========== Configuration ==========
 
-    fun setSpeed(speedMs: Long) {
-        val clampedSpeed = speedMs.coerceIn(GameConfig.MIN_SPEED_MS, GameConfig.MAX_SPEED_MS)
+    fun setSpeed(speedLevel: SpeedLevel) {
         _state.update { currentState ->
             currentState.copy(
-                config = currentState.config.copy(speedMs = clampedSpeed)
+                config = currentState.config.copy(speedLevel = speedLevel)
             )
         }
-
-        if (_state.value.isRunning) {
-            gameLoopJob?.cancel()
-            startGameLoop()
-        }
+        // No need to restart the game loop - it reads speedMs dynamically on each iteration
     }
 
     fun setGridSize(rows: Int, cols: Int) {

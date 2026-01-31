@@ -108,7 +108,7 @@ fun GameScreen(
                 bottomBar = {
                     ControlPanel(
                         isRunning = state.isRunning,
-                        speedMs = state.config.speedMs,
+                        speedLevel = state.config.speedLevel,
                         onPlayPause = viewModel::togglePlayPause,
                         onStep = viewModel::step,
                         onClear = viewModel::clear,
