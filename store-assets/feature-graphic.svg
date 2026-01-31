@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <!-- Background -->
+  <rect width="1024" height="500" fill="#0A0E0D"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#1A2622" stroke-width="0.5" fill="none">
+    <line x1="0" y1="50" x2="1024" y2="50"/>
+    <line x1="0" y1="100" x2="1024" y2="100"/>
+    <line x1="0" y1="150" x2="1024" y2="150"/>
+    <line x1="0" y1="200" x2="1024" y2="200"/>
+    <line x1="0" y1="250" x2="1024" y2="250"/>
+    <line x1="0" y1="300" x2="1024" y2="300"/>
+    <line x1="0" y1="350" x2="1024" y2="350"/>
+    <line x1="0" y1="400" x2="1024" y2="400"/>
+    <line x1="0" y1="450" x2="1024" y2="450"/>
+    <line x1="50" y1="0" x2="50" y2="500"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="250" y1="0" x2="250" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="350" y1="0" x2="350" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="550" y1="0" x2="550" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="650" y1="0" x2="650" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+    <line x1="800" y1="0" x2="800" y2="500"/>
+    <line x1="850" y1="0" x2="850" y2="500"/>
+    <line x1="900" y1="0" x2="900" y2="500"/>
+    <line x1="950" y1="0" x2="950" y2="500"/>
+  </g>
+
+  <!-- Decorative cells on left side - Pulsar-like pattern -->
+  <g fill="#00FF88" fill-opacity="0.6">
+    <rect x="80" y="150" width="30" height="30" rx="4"/>
+    <rect x="80" y="200" width="30" height="30" rx="4"/>
+    <rect x="80" y="250" width="30" height="30" rx="4"/>
+    <rect x="130" y="100" width="30" height="30" rx="4"/>
+    <rect x="130" y="350" width="30" height="30" rx="4"/>
+    <rect x="180" y="100" width="30" height="30" rx="4"/>
+    <rect x="180" y="350" width="30" height="30" rx="4"/>
+  </g>
+
+  <!-- Decorative cells on right - Glider stream -->
+  <g fill="#00FF88" fill-opacity="0.4">
+    <!-- Glider 1 -->
+    <rect x="750" y="100" width="25" height="25" rx="3"/>
+    <rect x="775" y="125" width="25" height="25" rx="3"/>
+    <rect x="725" y="150" width="25" height="25" rx="3"/>
+    <rect x="750" y="150" width="25" height="25" rx="3"/>
+    <rect x="775" y="150" width="25" height="25" rx="3"/>
+
+    <!-- Glider 2 -->
+    <rect x="850" y="200" width="25" height="25" rx="3"/>
+    <rect x="875" y="225" width="25" height="25" rx="3"/>
+    <rect x="825" y="250" width="25" height="25" rx="3"/>
+    <rect x="850" y="250" width="25" height="25" rx="3"/>
+    <rect x="875" y="250" width="25" height="25" rx="3"/>
+
+    <!-- Glider 3 -->
+    <rect x="920" y="320" width="25" height="25" rx="3"/>
+    <rect x="945" y="345" width="25" height="25" rx="3"/>
+    <rect x="895" y="370" width="25" height="25" rx="3"/>
+    <rect x="920" y="370" width="25" height="25" rx="3"/>
+    <rect x="945" y="370" width="25" height="25" rx="3"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="512" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#00FF88" text-anchor="middle">Game of Life</text>
+
+  <!-- Subtitle -->
+  <text x="512" y="290" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#69FFA9" text-anchor="middle">Cellular Automaton Simulator</text>
+
+  <!-- Tagline -->
+  <text x="512" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#5f6368" text-anchor="middle">Watch patterns evolve • 20+ classic patterns • Completely offline</text>
+</svg>

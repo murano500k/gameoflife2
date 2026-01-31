@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#0A0E0D"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#1A2622" stroke-width="1" fill="none">
+    <line x1="85" y1="0" x2="85" y2="512"/>
+    <line x1="170" y1="0" x2="170" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="341" y1="0" x2="341" y2="512"/>
+    <line x1="426" y1="0" x2="426" y2="512"/>
+    <line x1="0" y1="85" x2="512" y2="85"/>
+    <line x1="0" y1="170" x2="512" y2="170"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="341" x2="512" y2="341"/>
+    <line x1="0" y1="426" x2="512" y2="426"/>
+  </g>
+
+  <!-- Glider pattern -->
+  <!-- Glow effect layer -->
+  <g fill="#00FF88" fill-opacity="0.2">
+    <rect x="206" y="116" width="80" height="80" rx="8"/>
+    <rect x="286" y="196" width="80" height="80" rx="8"/>
+    <rect x="126" y="276" width="80" height="80" rx="8"/>
+    <rect x="206" y="276" width="80" height="80" rx="8"/>
+    <rect x="286" y="276" width="80" height="80" rx="8"/>
+  </g>
+
+  <!-- Main cells - Neon green -->
+  <g fill="#00FF88">
+    <!-- Row 1: top center -->
+    <rect x="216" y="126" width="60" height="60" rx="6"/>
+    <!-- Row 2: right -->
+    <rect x="296" y="206" width="60" height="60" rx="6"/>
+    <!-- Row 3: bottom three -->
+    <rect x="136" y="286" width="60" height="60" rx="6"/>
+    <rect x="216" y="286" width="60" height="60" rx="6"/>
+    <rect x="296" y="286" width="60" height="60" rx="6"/>
+  </g>
+
+  <!-- Bright center highlights -->
+  <g fill="#AAFFCC">
+    <rect x="228" y="138" width="36" height="36" rx="4"/>
+    <rect x="308" y="218" width="36" height="36" rx="4"/>
+    <rect x="148" y="298" width="36" height="36" rx="4"/>
+    <rect x="228" y="298" width="36" height="36" rx="4"/>
+    <rect x="308" y="298" width="36" height="36" rx="4"/>
+  </g>
+</svg>
